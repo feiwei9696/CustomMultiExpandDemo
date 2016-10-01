@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CustomMultiExpandDemo</string>
+    <item name="sidebar" type="id"></item>
+    <item name="curPosition" type="id"></item>
+</resources>

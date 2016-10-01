@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mrchen.custommultiexpanddemo.MainActivity">
+
+    <com.example.mrchen.custommultiexpanddemo.ui.PagerEnabledSlidingPaneLayout
+        android:id="@+id/spl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/leftfragment"
+            android:name="com.example.mrchen.custommultiexpanddemo.fragment.LeftFragment"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start" >
+        </fragment>
+
+        <fragment
+            android:id="@+id/rightfragment"
+            android:name="com.example.mrchen.custommultiexpanddemo.fragment.ContentFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="end"
+            android:layout_weight="1" >
+        </fragment>
+    </com.example.mrchen.custommultiexpanddemo.ui.PagerEnabledSlidingPaneLayout>
+</RelativeLayout>
