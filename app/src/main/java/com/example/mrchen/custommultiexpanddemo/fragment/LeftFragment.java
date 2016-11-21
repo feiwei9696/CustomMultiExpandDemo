@@ -37,16 +37,16 @@ public class LeftFragment extends BaseFragment {
      */
     @Override
     public void initData() {
-        SideBarItem item1 = new SideBarItem("父级1", 1, R.drawable.icon_mark1);
-        SideBarItem item2 = new SideBarItem("父级2", 2, R.drawable.icon_mark1);
+        SideBarItem item1 = new SideBarItem("处理流程", 1, R.drawable.icon_mark1);
+        SideBarItem item2 = new SideBarItem("申报流程", 2, R.drawable.icon_mark1);
 
-        SideBarItem item21 = new SideBarItem("子级11", 2.1f, R.drawable.icon_mark1);
-        SideBarItem item22 = new SideBarItem("子级12", 2.2f, R.drawable.icon_mark2);
-        SideBarItem item23 = new SideBarItem("子级13", 2.3f, R.drawable.icon_mark3);
+        SideBarItem item21 = new SideBarItem("预约", 2.1f, R.drawable.icon_mark1);
+        SideBarItem item22 = new SideBarItem("申请", 2.2f, R.drawable.icon_mark2);
+        SideBarItem item23 = new SideBarItem("通报", 2.3f, R.drawable.icon_mark3);
 
-        SideBarItem item221 = new SideBarItem("子级221", 2.21f, R.drawable.icon_mark1);
-        SideBarItem item222 = new SideBarItem("子级222", 2.22f, R.drawable.icon_mark2);
-        SideBarItem item223 = new SideBarItem("子级223", 2.23f, R.drawable.icon_mark3);
+        SideBarItem item221 = new SideBarItem("处理", 2.21f, R.drawable.icon_mark1);
+        SideBarItem item222 = new SideBarItem("反馈", 2.22f, R.drawable.icon_mark2);
+        SideBarItem item223 = new SideBarItem("错误", 2.23f, R.drawable.icon_mark3);
 
         item22.setParentItem(item2);
         item23.setParentItem(item2);
@@ -75,7 +75,7 @@ public class LeftFragment extends BaseFragment {
             @Override
             public void onSideBarItemClick(SideBarItem item, int position) {
                 ((MainActivity)context).getContentFragment().setContentText(item);
-                Toast.makeText(context,"you click " + item.getItemName(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,item.getItemName(),Toast.LENGTH_SHORT).show();
             }
         });
         super.setListener();
